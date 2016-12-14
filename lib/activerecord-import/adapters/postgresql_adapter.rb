@@ -146,7 +146,8 @@ module ActiveRecord::Import::PostgreSQLAdapter
   end
 
   def supports_on_duplicate_key_update?(current_version = postgresql_version)
-    current_version >= MIN_VERSION_FOR_UPSERT
+    true
+    #current_version >= MIN_VERSION_FOR_UPSERT
   end
 
   def support_setting_primary_key_of_imported_objects?
